@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:pokedex": "node dist/pokedex/server/server.mjs"
+    "serve:ssr:pokedex": "node dist/pokedex/server/server.mjs",
+    "deploy": "ng build --prod --base-href=/angular-ci-cd/"
   },
   "private": true,
   "dependencies": {
