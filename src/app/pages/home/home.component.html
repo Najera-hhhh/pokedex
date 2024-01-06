@@ -1,0 +1,21 @@
+<main id="container">
+    <app-detalle
+    [pokemon]="pokemonSelected"
+    (clicked)="cambiarEstadoDetalle()"
+    [abierto]="detalle"
+    [class.abierto]="detalle"
+    ></app-detalle>
+    <app-foto-pokemon
+    [pokemon] = "pokemonSelected"></app-foto-pokemon>
+    <div id="tarjetasContainer" #tarjets (scroll)="onScroll($event)">
+
+        @for (pokemon of listaPokemon; track $index) {
+            <app-tarjeta-pokemon [data]="pokemon" 
+                (pokemonSelected)="select($event)"
+                [seleccionado]="pokemon.name == pokemonSelected?.name"
+            ></app-tarjeta-pokemon>
+        }
+            
+        
+    </div>
+</main>

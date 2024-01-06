@@ -1,0 +1,19 @@
+#container{
+    border: 4px solid #90C6E9;
+    outline: 12px solid #F6E356;
+    max-width: 500px;
+    aspect-ratio: 1;
+    border-radius: 70px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #FAFCFE, 
+        #FAFCFE 15px,
+        #C9E3F3 15px,
+        #C9E3F3 25px
+    );
+
+    img{
+        width: 100%;
+        image-rendering: pixelated;
+    }
+}

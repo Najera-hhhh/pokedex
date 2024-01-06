@@ -1,0 +1,12 @@
+<div id="container" [class.seleccionado]="seleccionado">
+    @if(seleccionado){
+        <img src="../../../assets/img/flecha.png" id="flecha" alt="">
+    }
+    <div id="tarjeta" (click)="pokemonSelected.emit(id)">
+        <div id="circulo"></div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png"
+            alt="">
+        <span>No.{{id}}</span>
+        <span>{{data?.name}}</span>
+    </div>
+</div>

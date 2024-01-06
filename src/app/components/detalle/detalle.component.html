@@ -1,0 +1,34 @@
+<div id="backdrop"  [class.escondido]="!abierto" (click)="clicked.emit()"></div>
+<div id="container">
+  <div id="datos">
+
+    <div class="area">
+      <app-tarjeta-pokemon
+      [fullData]="pokemon"
+      [seleccionado]="false"
+      [id]="pokemon?.id"
+      >
+
+    </app-tarjeta-pokemon>
+  </div>
+  <div class="area">
+    <p><span class="etiqueta">Tipo</span> 
+        @for (tipo of pokemon?.types; track $index) {
+            <span class="tipo">{{tipo.type.name}}</span>
+        }
+    </p>
+    <p><span class="etiqueta">Altura</span>{{pokemon?.height}}'</p>
+    <p><span class="etiqueta">Peso</span>{{pokemon?.weight}} lbs.</p>
+  </div>
+  <div class="area">
+    <div id="descripcionContainer">
+      <div></div>
+      <p>{{descripcion}}</p>
+      <div></div>
+    </div>
+  </div>
+  </div>
+  <button (click)="clicked.emit()">
+    <img src="./../../../assets/img/flecha.png" alt="" [class.girar]="abierto">
+  </button>
+</div>

@@ -1,0 +1,43 @@
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    user-select: none;
+    background: linear-gradient(
+        to right,
+        #6488ff,
+        #6188ff 70%,
+        #71a4f3 71%,
+        #71a4f3 97%,
+        #8ec0f0 100%
+    );
+    a{
+        color: white;
+        text-decoration: none;
+        background-color: #4379cf;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 50px;
+        border-radius: 50px;
+        font-size: x-large;
+    }
+}
+
+#tituloContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    background-color: #88da82;
+    width: 300px;
+    border-radius: 50px;
+    height: 50px;
+    color: white;
+    border: 1px solid #30408d;
+
+    img{
+        height: 30px;
+    }
+}

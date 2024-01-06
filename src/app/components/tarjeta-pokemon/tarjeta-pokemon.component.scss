@@ -1,0 +1,45 @@
+#container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+
+    &.seleccionado::before {
+        position: absolute;
+        height: 120%;
+        content: '';
+        width: calc(100% + 8px);
+        left: 0px;
+        background-color: red;
+        z-index: -1;
+        border-radius: 5px;
+    }
+}
+
+#flecha {
+    height: 30px;
+    padding: 0 10px;
+}
+
+#tarjeta {
+    display: flex;
+    align-items: center;
+    background-color: #FBECB5;
+    border-radius: 25px 5px 5px 25px;
+    width: 90%;
+    font-size: large;
+    margin: 5px 0px;
+    gap: 0.3rem;
+}
+
+#circulo {
+    border-radius: 50%;
+    height: 40px;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.176);
+    margin-left: 5px;
+}
+
+img {
+    max-height: 6vh;
+}
